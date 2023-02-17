@@ -1,2 +1,6 @@
 #!/bin/bash
-gcc -S $CFILE
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ gcc -s $CFILE
