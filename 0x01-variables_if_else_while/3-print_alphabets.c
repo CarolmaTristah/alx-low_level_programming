@@ -1,22 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
 /**
-* main - prints the alphabet in lowercase, followed by a new line
-*
-* Return: Always 0 (Success)
-*/
+ * main - assigns a random number to int n everytime
+ * Analogy: prints letters - lowercase
+ * Return: Always 0 (Seun == Success)
+ */
 int main(void)
 {
-char c;
-for (c = 'a'; c <= 'z'; c++)
-{
-if (c != 'q' && c != 'e')
-{
-putchar(c);
-}
-}
-putchar('\n');
-return (0);
+	char c, C;
+
+	c = 'a';
+	C = 'A';
+
+	while (c <= 'z')
+	{
+		putchar(c);
+		c++;
+	}
+	while (C <= 'Z')
+	{
+		putchar(C);
+		C++;
+	}
+	putchar('\n');
+	return (0);
 }
