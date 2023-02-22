@@ -1,11 +1,19 @@
-#include <stdio.h>
-/**
- * int mai is the main entry of the program that  prints -putchar
- * Program always returns zero if it has compiled correctly
- */
+#include "main.h"
 
+/**
+* main - prints _putchar, followed by a new line
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-	print("_putchar %d\n") 
-	return(0);
-}	
+char c[] = "_putchar";
+int i;
+
+for (i = 0; i < 8; i++)
+{
+_putchar(c[i]);
+}
+_putchar('\n');
+return (0);
+}
