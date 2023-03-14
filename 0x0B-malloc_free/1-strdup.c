@@ -29,4 +29,4 @@ dup[i] = str[i];
 dup[i] = '\0';
 
 return (dup);
-
+}
