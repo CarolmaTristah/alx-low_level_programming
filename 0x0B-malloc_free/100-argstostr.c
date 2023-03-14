@@ -1,36 +1,44 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stddef.h>
-
 /**
- * argstostr - concatenates all the arguments of your program
- * @ac: argument count
- * @av: argument vector
- * Return: pointer to new string
- */
+* argstostr - prints args
+* @ac: takes in width of grid
+* @av: height of grid
+* Return: the args one line at a time
+*/
+
 char *argstostr(int ac, char **av)
 {
-char *s;
-int i, j, k, l;
+	char *str;
+	int count = 0, a = 0, b = 0, c = 0;
 
-if (ac == 0 || av == NULL)
-return (NULL);
-
-for (i = 0; i < ac; i++)
-{
-for (j = 0; av[i][j] != '\0'; j++)
-;
+	if (ac == 0 || av == NULL)
+	return (NULL);
+	while (a < ac)
+	{
+	b = 0;
+	while (av[a][b] != '\0')
+	{
+	count++;
+	b++;
+	}
+	a++;
+	}
+	count = count + ac + 1;
+	str = malloc(sizeof(char) * count);
+	if (str == NULL)
+	{
+	return (NULL);
+	}
+	for (a = 0; a < ac; a++)
+	{
+	for (b = 0; av[a][b] != '\0'; b++)
+	{
+	str[c] = av[a][b];
+	c++;
+	}
+	str[c] = '\n';
+	c++;
+	}
+	return (str);
 }
 
-s = malloc(sizeof(char) * (i + j + 1));
-if (s == NULL)
-return (NULL);
-
-for (k = 0; k < i; k++)
-s[k] = av[k];
-for (l = 0; l < j; l++)
-s[k + l] = av[l];
-s[k + l] = '\0';
-
-return (s);
-}
