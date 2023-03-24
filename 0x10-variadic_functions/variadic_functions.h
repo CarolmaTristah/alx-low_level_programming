@@ -13,4 +13,3 @@ void (*f)(va_list);
 } print_t;
 
 #endif /* !VARIADIC_FUNCTIONS_H */
-
